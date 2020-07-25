@@ -1,9 +1,7 @@
 # Planet Maker
 
 ![Build Status](https://img.shields.io/github/last-commit/RaymondBello/Procedural-Geometry-Planet-Maker) ![Build Status](https://img.shields.io/github/issues-raw/RaymondBello/Procedural-Geometry-Planet-Maker) ![Build Status](https://img.shields.io/github/contributors/RaymondBello/Procedural-Geometry-Planet-Maker?color) 
-
 ![Build Status](https://img.shields.io/github/languages/top/RaymondBello/Procedural-Geometry-Planet-Maker) ![Build Status](https://img.shields.io/github/languages/count/RaymondBello/Procedural-Geometry-Planet-Maker) 
-
 ![Build Status](https://img.shields.io/github/repo-size/RaymondBello/Procedural-Geometry-Planet-Maker?color=red) 
 
 Planet Maker is a simple unity-based tool, aimed at using Procedural Geometry to create a variety of 3D planets which can be exported as individual assets for 3D-printing or for use within any other graphic rendering game engine (such as Blender, Unity and UnrealEngine)
