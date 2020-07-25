@@ -83,9 +83,11 @@ Using a MinMax function the `elevation` relative to the Unit Sphere Surface `Rad
 The scaled elevation is evaluated as a number between `[0,1]`
 So the Elevation at any point on the plabet can be described as:
 
-`elevation = Radius * (1 + elevation)`
-`elevationMinMax.AddValue(elevation)`
-`PointOnPlanet = pointOnUnitSphere * elevation`
+```
+elevation = Radius * (1 + elevation)
+elevationMinMax.AddValue(elevation)
+PointOnPlanet = pointOnUnitSphere * elevation
+```
 
 The colour gradient is then mapped to the terrain face using a UV mesh. 
 Ocean Surface Smoothness can be toggled in the Material settings.
