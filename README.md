@@ -50,7 +50,9 @@ To create a cube, construct a mesh of all 6 plane faces of the cube from a local
 
 ##### 1.2. Add Triangles to the plane
 To scale resolution, triangles are added to each plane. The resolution is described by the number triangle vertices along the edge of the plane.
+
 ![resolution1.gif](https://www.dropbox.com/s/g1podg6yvg3covq/resolution1.gif?dl=0&raw=1)
+
 `resolution = number of triangle vertices on the edge of the plane`
 `total number of triangle vertices = resolution * resolution`
 `total number of triangles on the plane face = (resolution - 1) * 2 * 3`
@@ -58,7 +60,9 @@ To scale resolution, triangles are added to each plane. The resolution is descri
 ##### 1.3 Normalize Unit Cube to Sphere
 Construct a mesh of all 6 planes on the cube. The normalized points on the Unit Cube are assigned to the points on the Unit Sphere.
 Resulting in elevation of the terrain at any point on the Unit Sphere.
+
 ![sphere1.gif](https://www.dropbox.com/s/gusj5kwmapotakq/sphere1.gif?dl=0&raw=1)
+
 `pointOnUnitCube = localUp + (percent.x - .5f) * 2 * axisA + (percent.y - .5f) * 2 * axisB;`
 `pointOnUnitSphere = pointOnUnitCube.normalized;`
 `unscaledElevation = shapeGenerator.CalculateUnscaledElevation(pointOnUnitSphere);`
@@ -72,9 +76,11 @@ Multiple layers of Noise can be added to each other to generate a more interesti
 Using a MinMax function the `elevation` relative to the Unit Sphere Surface `Radius` can be determined.
 The scaled elevation is evaluated as a number between `[0,1]`
 So the Elevation at any point on the plabet can be described as:
+
 `elevation = Radius * (1 + elevation)`
 `elevationMinMax.AddValue(elevation)`
 `PointOnPlanet = pointOnUnitSphere * elevation`
+
 The colour gradient is then mapped to the terrain face using a UV mesh. 
 Ocean Surface Smoothness can be toggled in the Material settings.
 ![gradient1.gif](https://www.dropbox.com/s/loi0errzjlj3was/gradient1.gif?dl=0&raw=1)
