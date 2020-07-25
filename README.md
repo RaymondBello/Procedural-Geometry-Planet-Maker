@@ -89,8 +89,8 @@ elevationMinMax.AddValue(elevation)
 PointOnPlanet = pointOnUnitSphere * elevation
 ```
 
-The colour gradient is then mapped to the terrain face using a UV mesh. 
-Ocean Surface Smoothness can be toggled in the Material settings.
+The colour gradient is then mapped to the terrain face elevation using a UV mesh. 
+Ocean Surface Smoothness can be toggled in the Planet Material settings.
 
 ![gradient1.gif](https://www.dropbox.com/s/loi0errzjlj3was/gradient1.gif?dl=0&raw=1)
 
