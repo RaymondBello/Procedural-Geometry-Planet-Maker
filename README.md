@@ -6,7 +6,17 @@
 
 Planet Maker is a simple unity-based tool, aimed at using Procedural Geometry to create a variety of 3D planets which can be exported as individual assets for 3D-printing or for use within any other graphic rendering game engine (such as Blender, Unity and UnrealEngine)
 
-# Usage steps
+![gradient1.gif](https://www.dropbox.com/s/loi0errzjlj3was/gradient1.gif?dl=0&raw=1)
+
+## Table of contents
+* [Usage](#usage-steps)
+* [New Features](#new-features)
+* [Installation](#installation)
+* [Implementation](#implementation)
+* [Articles](#articles)
+* [To-do](#to-dos)
+
+# Usage 
   - Clone repository
   - Load Planet-Maker project into Unity (Unity 2019.4.4f1 used for development)
   - Select the 'Planet' Object in the Hierarchy Tab on the left.
@@ -30,16 +40,6 @@ Navigate to a clean working directory then type the following in the terminal/cm
 ```sh
 $ git clone https://github.com/RaymondBello/Procedural-Geometry-Planet-Maker.git
 ```
-
-## Articles
-
-This Planet Maker tool implements a couple of open source techniques/articles to aid in its functionality:
-
-* [Intro to Procedural Geometry: Linden Reid][intro-p] - Bare basics of creating procedural geometry in Unity
-* [Simplex Noise Demystified: Stefan Gustavson][simplex] - Noise algorithm that outputs 3-dimensional Simplex Perlin noise.
-* [Unity's Gradient Module Documentation][gradient] - Gradient used for adding Elevation Colors and Ocean Depth colours.
-
-And of course Planet-Maker itself is open source with a [public repository][planet] on GitHub.
 
 
 # Implementation
@@ -96,8 +96,18 @@ Ocean Surface Smoothness can be toggled in the Material settings.
 
 Thats it, you've made your own planet.
 
+## Articles
 
-### Todos
+This Planet Maker tool implements a couple of open source techniques/articles to aid in its functionality:
+
+* [Intro to Procedural Geometry: Linden Reid][intro-p] - Bare basics of creating procedural geometry in Unity
+* [Simplex Noise Demystified: Stefan Gustavson][simplex] - Noise algorithm that outputs 3-dimensional Simplex Perlin noise.
+* [Unity's Gradient Module Documentation][gradient] - Gradient used for adding Elevation Colors and Ocean Depth colours.
+
+And of course Planet-Maker itself is open source with a [public repository][planet] on GitHub.
+
+
+### To-dos
 
  - Improve Render Time for higher mesh resolutions
  - Add an optimized Elevation Gradient scaling funtion that works for all Elevation points on various noise filters on Unit Sphere
