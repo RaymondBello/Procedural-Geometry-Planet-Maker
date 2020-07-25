@@ -53,11 +53,11 @@ To scale resolution, triangles are added to each plane. The resolution is descri
 
 ![resolution1.gif](https://www.dropbox.com/s/g1podg6yvg3covq/resolution1.gif?dl=0&raw=1)
 
-`resolution = number of triangle vertices on the edge of the plane`
-
-`total number of triangle vertices = resolution * resolution`
-
-`total number of triangles on the plane face = (resolution - 1) * 2 * 3`
+```
+resolution = number of triangle vertices on the edge of the plane
+total number of triangle vertices = resolution * resolution
+total number of triangles on the plane face = (resolution - 1) * 2 * 3
+```
 
 ##### 1.3 Normalize Unit Cube to Sphere
 Construct a mesh of all 6 planes on the cube. The normalized points on the Unit Cube are assigned to the points on the Unit Sphere.
@@ -65,11 +65,11 @@ Resulting in elevation of the terrain at any point on the Unit Sphere.
 
 ![sphere1.gif](https://www.dropbox.com/s/gusj5kwmapotakq/sphere1.gif?dl=0&raw=1)
 
-`pointOnUnitCube = localUp + (percent.x - .5f) * 2 * axisA + (percent.y - .5f) * 2 * axisB;`
-
-`pointOnUnitSphere = pointOnUnitCube.normalized;`
-
-`unscaledElevation = shapeGenerator.CalculateUnscaledElevation(pointOnUnitSphere);`
+```
+pointOnUnitCube = localUp + (percent.x - .5f) * 2 * axisA + (percent.y - .5f) * 2 * axisB;
+pointOnUnitSphere = pointOnUnitCube.normalized;
+unscaledElevation = shapeGenerator.CalculateUnscaledElevation(pointOnUnitSphere);
+```
 
 #### 2. Terrain
 ##### 2.1. Add Simplex Noise to elevation
