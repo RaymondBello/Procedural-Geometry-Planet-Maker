@@ -9,7 +9,7 @@ Planet Maker is a simple unity-based tool, aimed at using Procedural Geometry to
 ![gradient1.gif](https://www.dropbox.com/s/loi0errzjlj3was/gradient1.gif?dl=0&raw=1)
 
 ## Table of contents
-* [Usage](#usage-steps)
+* [Usage](#usage)
 * [New Features](#new-features)
 * [Installation](#installation)
 * [Implementation](#implementation)
@@ -24,7 +24,7 @@ Planet Maker is a simple unity-based tool, aimed at using Procedural Geometry to
   - To Export modified planet: **Asset>Export Package**
   - Magic
 
-### New Features!
+## New Features
 
   - Added Simplex Noise based on a paper by [Stefan Gustavson][simplex].
   - Added Multi-Noise Filter Layering for a more realistic terrain appearance on the planet surface.
