@@ -54,7 +54,9 @@ To scale resolution, triangles are added to each plane. The resolution is descri
 ![resolution1.gif](https://www.dropbox.com/s/g1podg6yvg3covq/resolution1.gif?dl=0&raw=1)
 
 `resolution = number of triangle vertices on the edge of the plane`
+
 `total number of triangle vertices = resolution * resolution`
+
 `total number of triangles on the plane face = (resolution - 1) * 2 * 3`
 
 ##### 1.3 Normalize Unit Cube to Sphere
@@ -64,14 +66,18 @@ Resulting in elevation of the terrain at any point on the Unit Sphere.
 ![sphere1.gif](https://www.dropbox.com/s/gusj5kwmapotakq/sphere1.gif?dl=0&raw=1)
 
 `pointOnUnitCube = localUp + (percent.x - .5f) * 2 * axisA + (percent.y - .5f) * 2 * axisB;`
+
 `pointOnUnitSphere = pointOnUnitCube.normalized;`
+
 `unscaledElevation = shapeGenerator.CalculateUnscaledElevation(pointOnUnitSphere);`
 
 #### 2. Terrain
 ##### 2.1. Add Simplex Noise to elevation
 To generate coherent noise, an open-source implementation of the [simplex noise algorithm][simplex] is added to the elevation .`Assets/Noise.cs`
 Multiple layers of Noise can be added to each other to generate a more interesting terrain (Octaves).
+
 ![perlin-noise2.gif](https://www.dropbox.com/s/cy9okazeibsw4iy/perlin-noise2.gif?dl=0&raw=1)
+
 ##### 2.2. Add gradient colour shader for terrain and ocean depth
 Using a MinMax function the `elevation` relative to the Unit Sphere Surface `Radius` can be determined.
 The scaled elevation is evaluated as a number between `[0,1]`
@@ -83,6 +89,7 @@ So the Elevation at any point on the plabet can be described as:
 
 The colour gradient is then mapped to the terrain face using a UV mesh. 
 Ocean Surface Smoothness can be toggled in the Material settings.
+
 ![gradient1.gif](https://www.dropbox.com/s/loi0errzjlj3was/gradient1.gif?dl=0&raw=1)
 
 Thats it, you've made your own planet.
